@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky{
+    background: #1b1b1b;
+    padding: 10px 0;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar .menu-list {
+  display: inline-flex;
+}
+.menu-list li {
+  list-style: none;
+}
+
+.menu-list li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover {
+  color: #007bff;
+}
+/* .banner {
+  background: url("../img/banner.jpg") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+} */
+.home{
+  height: 100vh;
+  background: black;
+  color: white;
+  padding: 40px 0;
+  display: flex;
+}
+.home .title{
+  font-size: 70px;
+  font-weight: 500;
+  position: absolute;
+  width: 300px;
+  top: 110px;
+  left: 50px;
+  padding: 60 0 0 50;
+  margin: 60 0 0 60;
+}
+.home button{
+  position: absolute;
+  top: 65vh;
+  left: 50px;
+}
+.home img{
+  width: 65vw;
+  height: 75vh;
+  position: absolute;
+  right: 100px;
+  bottom: 109px;
+}
+.btn-link{
+  color: white;
+  background: black;
+  width: 90px;
+  height: 40px;
+  border: 2px solid white;
+}
+.about {
+  padding: 40px 0;
+  display: flex;
+}
+.about h1 {
+  font-size: 38px;
+  font-weight: 700;
+  position: relative;
+  left: 100px;
+  margin-top: 25px;
+}
+.about p {
+  padding-top: 20px;
+  text-align: left;
+}
+.about button{
+  color: white;
+  background: black;
+  font-size: 10dp;
+  width: 80px;
+  height: 40px;
+  border: 2px solid white;  
+  position: absolute;
+  right: 100px;
+  margin: 45px 10px 0 0;
+}
+.content{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 20 10 10 10;
+}
+
+
+/* .content button{
+  padding: 0 0 0 0;
+} */
+.about img{
+  width: 350px;
+  margin: 29px 50px 0 0;
+  
+}
+.icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.icon.cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+.project_alpha{
+  padding-top: 20px;
+  padding-left: 20px;
+  display: flex;
+  background: black;
+  color: white;
+  height: 100vh
+}
+.project_alpha .content{
+  display: block;
+  padding: 20px 20 20 30;
+}
+.project_alpha button{
+  color: white;
+  background: black;
+  width: 90px;
+  height: 40px;
+  border: 2px solid white;
+  margin: 50 0 0 25;
+}
+.project_alpha img{
+  width: 70vw;
+  height: 70vh;
+  padding: 20px;
+}
+.joinUs{
+  display:flexbox;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+.joinUs li{
+  list-style: none;
+}
+.team{
+  background: white;
+  color: black;
+  height: 50vh;
+}
+footer{
+  height: 5vh;
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .trademark{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+@media (max-width: 868px) {
+  body.disabledScroll {
+    overflow: hidden;
+  }
+  .icon {
+    display: block;
+  }
+  .icon.hide {
+    display: none;
+  }
+  .navbar .menu-list {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu-list.active{
+      left: 0%;
+  }
+  .navbar.show .menu-list {
+    left: 0%;
+  }
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a {
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar.show .menu-list li a {
+    margin-left: 0px;
+  }
+}
